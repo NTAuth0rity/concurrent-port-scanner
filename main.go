@@ -4,10 +4,13 @@ import (
 	"flag"
 	"fmt"
 	"net"
+	"sync"
 	"time"
 )
 
 func main() {
+	var wg sync.WaitGroup
+
 	addressFlag := flag.String("a", "", "Provide address to be scanned.")
 	rangeFlag := flag.Bool("f", false, "If used all 65535 ports will be scanned, otherwise only the first 1024 will be tested.")
 	timeoutFlag := flag.Int("t", 2, "Timeout duration in seconds (default: 2)")
