@@ -1,5 +1,5 @@
-# port-scanner-go
-Primitive sequential port scanner written in go
+# concurrent-port-scanner
+Concurrent port scanner written in go
 
 ## Usage:
 ![Usage](media/image.png)
